@@ -1,10 +1,12 @@
 // Import our ThreeJS dependencies
 import * as THREE from 'three';
 import * as ZapparThree from '@zappar/zappar-threejs';
-import './index.sass';
+import './index.css';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import targetImage from '../assets/example-tracking-image.zpt';
-import model from '../assets/ZapBolt.glb';
+
+const targetImage = new URL('../assets/example-tracking-image.zpt', import.meta.url).href;
+const model = new URL('../assets/ZapBolt.glb', import.meta.url).href;
+
 
 // ZapparThree provides a LoadingManager that shows a progress bar while
 // the assets are downloaded
